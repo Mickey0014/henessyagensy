@@ -1,0 +1,115 @@
+/* =========================
+   HOME SECTION
+========================= */
+
+.home {
+  min-height: 90vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 60px;
+  gap: 40px; /* 🔥 increased slightly for breathing space */
+}
+
+/* =========================
+   LEFT TEXT CONTENT
+========================= */
+
+.home-text {
+  max-width: 580px; /* 🔥 tiny increase for balance */
+}
+
+.home-text h1 {
+  font-size: 3.2rem;
+  line-height: 1.2;
+  color: var(--text-main);
+}
+
+.home-text span {
+  color: var(--pink);
+}
+
+.home-text p {
+  margin: 22px 0 35px;
+  font-size: 1.1rem;
+  color: var(--text-muted);
+}
+
+/* =========================
+   CTA BUTTON
+========================= */
+
+.cta {
+ display: inline-block;
+  padding: 14px 38px;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 40px;
+
+  color: #fff;
+  background: linear-gradient(135deg, var(--pink), #7a6cff);
+
+  text-decoration: none;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.cta:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 30px rgba(255, 95, 162, 0.35);
+}
+
+/* =========================
+   ANIMATION SECTION
+========================= */
+
+.home-animation {
+  width: 420px;
+  height: 420px;
+  margin-left: -25px; /* 🔥 subtle pull (not tight) */
+}
+
+/* Ensures no white box from Lottie */
+.home-animation lottie-player,
+.home-animation svg {
+  background: transparent !important;
+}
+/* =========================
+   MOBILE RESPONSIVE (HOME)
+========================= */
+
+@media (max-width: 768px) {
+
+  .home {
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    padding: 40px 20px;
+    gap: 35px;
+  }
+
+  .home-text {
+    max-width: 100%;
+  }
+
+  .home-text h1 {
+    font-size: 2.2rem;
+    line-height: 1.25;
+  }
+
+  .home-text p {
+    font-size: 1rem;
+    margin: 18px 0 28px;
+  }
+
+  .cta {
+    padding: 13px 32px;
+    font-size: 0.95rem;
+  }
+
+  .home-animation {
+    width: 300px;
+    height: 300px;
+    margin-left: 0; /* remove desktop pull */
+  }
+}
+

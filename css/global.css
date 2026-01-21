@@ -1,0 +1,94 @@
+/* === GLOBAL PAGE RHYTHM === */
+
+:root { 
+  --bg-main: #0b0b0f;
+  --bg-secondary: #12121a;
+  --pink: #ff5fa2;
+  --text-main: #ffffff;
+  --text-muted: #bdbdbd;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* =========================
+   BODY BACKGROUND (PREMIUM)
+========================= */
+
+body {
+  background:
+    radial-gradient(700px 500px at 10% 60%, rgba(255, 95, 162, 0.14), transparent 70%),
+    radial-gradient(600px 400px at 85% 30%, rgba(120, 100, 255, 0.12), transparent 70%),
+    radial-gradient(400px 300px at 50% 90%, rgba(255, 120, 200, 0.08), transparent 70%),
+    var(--bg-main);
+  color: var(--text-main);
+  overflow-x: hidden;
+  position: relative;
+}
+
+/* =========================
+   FLOATING SHAPES (DESIGN)
+========================= */
+
+body::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background:
+    radial-gradient(circle at 20% 20%, rgba(255, 95, 162, 0.08), transparent 40%),
+    radial-gradient(circle at 80% 80%, rgba(140, 100, 255, 0.08), transparent 40%);
+  animation: floatBg 20s ease-in-out infinite alternate;
+  z-index: 0;
+  pointer-events: none;
+}
+
+/* =========================
+   NOISE TEXTURE
+========================= */
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background-image: url("https://grainy-gradients.vercel.app/noise.svg");
+  opacity: 0.04;
+  pointer-events: none;
+  z-index: 0;
+}
+
+main, section, header, footer {
+  position: relative;
+  z-index: 1;
+}
+
+/* =========================
+   BACKGROUND ANIMATION
+========================= */
+
+@keyframes floatBg {
+  0% {
+    transform: translateY(0px) translateX(0px);
+  }
+  100% {
+    transform: translateY(-40px) translateX(30px);
+  }
+}
+body.menu-open {
+  overflow: hidden;
+}
+html {
+  scroll-behavior: smooth;
+}
+/* === GLOBAL PAGE RHYTHM === */
+.page-section {
+  position: relative;
+  padding-block: clamp(80px, 12vh, 140px);
+}
+
+.page-section:first-of-type {
+  padding-top: clamp(60px, 10vh, 100px);
+}

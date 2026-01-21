@@ -1,0 +1,230 @@
+/* =========================
+   X-FACTOR SECTION
+========================= */
+
+/* =========================
+   X-FACTOR SECTION
+========================= */
+
+.xfactor {
+  padding: 1px 60px 80px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* HERO */
+.xfactor-hero {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.xfactor-hero h2 {
+  font-size: 3rem;
+}
+
+.xfactor-hero .subtitle {
+  margin-top: 10px;
+  font-size: 1.1rem;
+  color: var(--text-muted);
+}
+
+/* =========================
+   PROOF ZONE
+========================= */
+
+.xfactor-proof {
+  display: flex;
+  flex-direction: column;
+  gap: 36px;
+}
+
+/* PROOF BOX */
+.proof-box {
+  display: grid;
+  grid-template-columns: 260px 1fr;
+  gap: 32px;
+  align-items: center;
+
+  padding: 28px;
+  border-radius: 22px;
+
+  background: linear-gradient(
+    135deg,
+    rgba(255,255,255,0.04),
+    rgba(255,255,255,0.02)
+  );
+
+  border: 1px solid rgba(255,255,255,0.12);
+  backdrop-filter: blur(10px);
+}
+
+/* TEXT */
+.proof-text h3 {
+  font-size: 1.4rem;
+  color: var(--pink);
+  margin-bottom: 8px;
+}
+
+.proof-text p {
+  color: var(--text-muted);
+  font-size: 1rem;
+}
+
+/* =========================
+   GRAPHS
+========================= */
+
+.graph {
+  position: relative;
+  height: 180px;
+  border-radius: 16px;
+  background: rgba(255,255,255,0.04);
+}
+
+
+
+/* =========================
+   WHY SECTION
+========================= */
+
+.xfactor-why {
+  margin: 80px auto 60px;
+  padding: 36px;
+  text-align: center;
+
+  max-width: 900px;
+
+  background: linear-gradient(
+    135deg,
+    rgba(255,255,255,0.04),
+    rgba(255,255,255,0.02)
+  );
+
+  border-radius: 22px;
+  border: 1px solid rgba(255,255,255,0.12);
+}
+
+.xfactor-why h3 {
+  font-size: 2rem;
+  color: var(--pink);
+  margin-bottom: 18px;
+}
+
+.xfactor-why p {
+  color: var(--text-muted);
+  line-height: 1.7;
+}
+
+/* =========================
+   PROCESS
+========================= */
+
+.xfactor-process {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.xfactor-process h3 {
+  font-size: 2rem;
+  margin-bottom: 26px;
+  color: var(--pink);
+}
+
+.xfactor-process ul {
+  list-style: none;
+  padding: 0;
+}
+
+.xfactor-process li {
+  margin-bottom: 14px;
+  padding-left: 20px;
+  position: relative;
+  color: var(--text-muted);
+}
+
+.xfactor-process li::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  color: var(--pink);
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 768px) {
+.xfactor-hero h2 {
+  margin-top: 250px;
+    font-size: 2.2rem; /* same as Services heading */
+  }
+
+  .xfactor {
+    padding: 80px 20px;
+  }
+
+  .proof-box {
+    grid-template-columns: 1fr;
+    text-align: center;
+    gap: 20px;
+  }
+
+  .graph {
+    height: 160px;
+  }
+  
+}
+#x-factor {
+  margin-top: 350px;
+  padding-top: 100;
+  position: relative;
+  z-index: 2;
+}
+/* =========================
+   X-FACTOR TITLE STYLING
+========================= */
+
+.xfactor-title {
+  font-size: 2.2rem;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+
+.xfactor-title .x-white {
+  color: var(--text-main);
+}
+
+.xfactor-title .factor-pink {
+  color: var(--pink);
+}
+
+/* =========================
+   MOBILE SIZE MATCH (Our Services)
+========================= */
+
+/* =========================
+   LOTTIE GRAPH SUPPORT
+========================= */
+
+/* =========================
+   LOTTIE GRAPH SUPPORT
+========================= */
+
+.lottie-graph {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.lottie-graph lottie-player {
+  width: 100%;
+  height: 100%;
+  max-width: 240px;
+}
+
+/* MOBILE OPTIMIZATION */
+@media (max-width: 768px) {
+  .lottie-graph lottie-player {
+    max-width: 200px;
+  }
+}

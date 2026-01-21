@@ -1,0 +1,399 @@
+.services {
+  padding: 100px 60px 40px;
+  text-align: center;
+}
+
+/* HERO */
+.services-hero h2 {
+  font-size: 3rem;
+  margin-bottom: 12px;
+}
+
+.services-hero span {
+  color: var(--pink);
+}
+
+.services-hero p {
+  max-width: 620px;
+  margin: 0 auto 60px;
+  color: var(--text-muted);
+  font-size: 1.1rem;
+}
+
+/* GRID */
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+  margin-bottom: 80px;
+}
+
+/* CARD */
+.service-card {
+  padding: 28px;
+  border-radius: 20px;
+  background: linear-gradient(
+    135deg,
+    rgba(255,95,162,0.15),
+    rgba(120,100,255,0.12)
+  );
+  backdrop-filter: blur(10px);
+  transition: 0.35s ease;
+}
+
+.service-card:hover {
+  transform: translateY(-10px) scale(1.02);
+}
+
+.service-card h3 {
+  margin-bottom: 14px;
+  font-size: 1.3rem;
+}
+
+.service-card p {
+  font-size: 0.95rem;
+  color: var(--text-muted);
+}
+
+/* ANIMATION */
+.services-animation {
+  width: 380px;
+  margin: 0 auto;
+}
+
+/* =========================
+   MOBILE RESPONSIVE
+========================= */
+
+@media (max-width: 768px) {
+
+  .services {
+    padding: 80px 20px;
+  }
+
+  .services-hero h2 {
+    font-size: 2.2rem;
+  }
+
+  .services-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .services-animation {
+    width: 280px;
+  }
+}
+/* =========================
+   SERVICE DETAILS SECTION
+========================= */
+
+/* =========================
+   SERVICE DETAILS
+========================= */
+
+.service-details {
+  padding: 60px 60px; 
+}
+
+.details-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 36px;
+
+  max-width: 1200px;
+  margin: 0 auto;              /* controls spacing BETWEEN sections */
+  padding: 36px;
+
+  background: linear-gradient(
+  135deg,
+  rgba(255,255,255,0.04),
+  rgba(255,255,255,0.02)
+);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 22px;
+
+  backdrop-filter: blur(10px);
+}
+.details-container:hover {
+  border-color: rgba(255, 95, 162, 0.45);
+  box-shadow: 0 0 30px rgba(255, 95, 162, 0.08);
+}
+.details-container + .details-container {
+  margin-top: 24px;
+}
+
+/* 🔥 THIS WAS MISSING */
+.details-animation {
+  width: 100%;
+  max-width: 360px;
+  height: 360px;   /* was 420px */
+  margin: 0 auto;
+}
+
+.details-animation lottie-player {
+  width: 100%;
+  height: 100%;
+}
+
+/* CONTENT */
+.details-content h3 {
+  font-size: 2.2rem;
+  margin-bottom: 20px;
+  color: var(--pink);
+}
+
+.details-content p {
+  font-size: 1.05rem;
+  line-height: 1.7;
+  color: var(--text-muted);
+  margin-bottom: 12px;
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 768px) {
+  .details-container {
+    grid-template-columns: 1fr;
+    text-align: left;
+    padding: 24px;      /* tighter on mobile */
+    gap: 24px;          /* reduce space between animation & text */
+  }
+
+  .details-animation {
+    height: 260px;      /* slightly tighter */
+  }
+}
+.service-card.active {
+  outline: 2px solid var(--pink);
+  transform: translateY(-12px) scale(1.03);
+}
+.details-content {
+  max-width: 520px;
+}
+
+/* HERO LINE */
+.details-content .lead {
+  font-size: 1.15rem;
+  line-height: 1.6;
+  margin-bottom: 22px;
+}
+
+/* PINK HIGHLIGHT */
+.details-content .highlight {
+  color: var(--pink);
+  font-weight: 600;
+}
+
+/* CULTURE BEATS */
+.details-content .beats {
+  display: flex;
+  gap: 12px;
+  margin: 18px 0 26px;
+  flex-wrap: wrap;
+}
+
+.details-content .beats span {
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  background: rgba(255,95,162,0.12);
+  border: 1px solid rgba(255,95,162,0.25);
+}
+
+/* CHANNEL LIST */
+.details-content .channels {
+  list-style: none;
+  padding: 0;
+  margin: 20px 0 26px;
+}
+
+.details-content .channels li {
+  margin-bottom: 8px;
+  position: relative;
+  padding-left: 18px;
+}
+
+.details-content .channels li::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  color: var(--pink);
+}
+
+/* QUOTE BLOCK */
+.details-content .quote {
+  font-size: 1.1rem;
+  font-style: italic;
+  margin: 28px 0;
+  color: #fff;
+}
+
+/* MUTED CLOSE */
+.details-content .muted {
+  color: var(--text-muted);
+  margin-top: 18px;
+}
+/* =========================
+   STACK WRAPPER
+========================= */
+
+.service-details-stack {
+  position: relative;
+  max-width: 1200px;
+  margin: 40px auto 80px;
+  height: 500px;
+}
+
+/* =========================
+   STACKED CARDS
+========================= */
+
+.service-details {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  pointer-events: none;
+
+  transform:
+    translateY(40px)
+    scale(0.94);
+
+  transition:
+    transform 0.7s cubic-bezier(.16,1,.3,1),
+    opacity 0.4s ease;
+
+  z-index: 1;
+}
+
+/* ACTIVE CARD */
+.service-details.active {
+  opacity: 1;
+  pointer-events: auto;
+
+  transform:
+    translateY(0)
+    scale(1);
+
+  z-index: 4;
+}
+
+/* BACK STACK FEEL */
+.service-details:nth-child(2) {
+  transform: translateY(20px) scale(0.97);
+  z-index: 3;
+}
+
+.service-details:nth-child(3) {
+  transform: translateY(35px) scale(0.94);
+  z-index: 2;
+}
+
+.service-details:nth-child(4) {
+  transform: translateY(50px) scale(0.91);
+  z-index: 1;
+}
+/* =========================
+   MOBILE STACK FIX (KEEP DECK)
+========================= */
+
+@media (max-width: 768px) {
+
+  .service-details-stack {
+    height: 440; /* tighter deck for mobile */
+    margin-bottom: 60px;
+  }
+
+  .service-details {
+    position: absolute;
+    inset: 0;
+    opacity: 0;
+    pointer-events: none;
+
+    transform: translateY(28px) scale(0.95);
+  }
+
+  .service-details.active {
+    opacity: 1;
+    pointer-events: auto;
+
+    transform: translateY(0) scale(1);
+    z-index: 4;
+  }
+
+  /* Softer layered stack */
+  .service-details:nth-child(2) {
+    transform: translateY(16px) scale(0.97);
+    z-index: 3;
+  }
+
+  .service-details:nth-child(3) {
+    transform: translateY(28px) scale(0.94);
+    z-index: 2;
+  }
+
+  .service-details:nth-child(4) {
+    transform: translateY(40px) scale(0.91);
+    z-index: 1;
+  }
+}
+/* =========================
+   MOBILE TIGHT SPACING FIX
+========================= */
+
+@media (max-width: 768px) {
+
+  /* Reduce gap after service cards */
+  .services-grid {
+    margin-bottom: 32px;
+  }
+
+  /* Pull deck closer to cards */
+  .service-details-stack {
+    margin-top: 12px;
+    margin-bottom: 100px;
+    height: 440px; /* slightly tighter */
+  }
+
+  /* Reduce vertical padding inside each card */
+  .service-details {
+    padding: 24px 16px;
+  }
+
+  /* Inner container tighter */
+  .details-container {
+    padding: 22px;
+    gap: 20px;
+  }
+}
+/* =========================
+   CARD ↔ STACK GAP CONTROL
+========================= */
+
+/* DESKTOP */
+.services-grid {
+  margin-bottom: 48px; /* was 80px */
+}
+
+.service-details-stack {
+  margin-top: 16px;   /* was 40px */
+  margin-bottom: 64px;
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+  .services-grid {
+    margin-bottom: 24px;
+  }
+
+  .service-details-stack {
+    margin-top: 8px;
+    margin-bottom: 44px;
+  }
+}
+.services-wrapper {
+  position: relative;
+  padding-bottom: 80px; /* 👈 THIS CREATES THE PAGE GAP */
+}
